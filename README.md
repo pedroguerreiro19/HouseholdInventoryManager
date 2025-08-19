@@ -1,50 +1,95 @@
-# Welcome to your Expo app 👋
+# 🏠 CasaCheiaApp
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**CasaCheiaApp** is a full-stack mobile application designed to help families manage their household inventory in a collaborative way. Users can track missing items, add or remove products, and sync in real time with other family members. Built using modern technologies for both frontend and backend.
 
-## Get started
+---
 
-1. Install dependencies
+## 📱 Features
 
-   ```bash
-   npm install
-   ```
+- ✅ Track missing household items
+- ✅ Family group management (invite, join, view member lists)
+- ✅ Visual notifications for unseen items
+- ✅ Secure user authentication with JWT
+- ✅ Rate limiting and backend protection
+- ✅ Modern, gradient-based UI with rounded cards and navigation
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 🧱 Tech Stack
 
-In the output, you'll find options to open the app in a
+### 📦 Frontend
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **React Native**
+- **Expo Router**
+- **TypeScript**
+- **NativeWind (TailwindCSS for React Native)**
+- **AsyncStorage**
+- **React Navigation (Bottom Tabs)**
+- **Lucide React Native Icons**
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Get a fresh project
+### 🌐 Backend
 
-When you're ready, run:
+- **Node.js**
+- **Express.js**
+- **MongoDB (with Mongoose)**
+- **JWT (jsonwebtoken)**
+- **BcryptJS** for password hashing
+- **Rate Limiting (express-rate-limit)**
+
+---
+
+## 🐳 Docker Setup
+
+The project is fully containerized using Docker:
 
 ```bash
-npm run reset-project
+# Start the entire application
+docker compose up --build
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Services:
+- `backend`: Express.js API
+- `mongo`: MongoDB database
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📁 Project Structure
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```
+CasaCheiaApp/
+├── frontend/           # Expo React Native app
+│   ├── app/
+│   ├── assets/
+│   ├── components/
+│   ├── contexts/
+│   ├── types/
+│   ├── utils/
+│   └── ...
+├── backend/            # Node.js + Express API
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── middlewares/
+│   │   ├── models/
+│   │   ├── routes/
+│   ├── .env
+│   └── app.js
+│   └── ...
+├── docker-compose.yml
+└── README.md
+```
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## 🛡️ Security Notes
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Environment variables (e.g., DB credentials, JWT secret) are stored securely in `.env` and ignored by Git.
+- Rate limiting is applied to sensitive routes (`/login`, `/create`).
+- Tokens are stored using secure storage on the device.
+
+---
+
+
+## 📄 License
+
+This project is licensed under the MIT License.
