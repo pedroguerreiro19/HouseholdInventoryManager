@@ -81,7 +81,7 @@ CasaCheiaApp/
 
 ---
 
-## 🛡Security Notes
+## Security Notes
 
 - Environment variables (e.g., DB credentials, JWT secret) are stored securely in `.env` and ignored by Git.
 - Rate limiting is applied to sensitive routes (`/login`, `/create`).
@@ -92,4 +92,4 @@ CasaCheiaApp/
 
 ## License
 
-This project is licensed under the MIT License.
+MIT License. Feel free to use, modify, and share this project.
