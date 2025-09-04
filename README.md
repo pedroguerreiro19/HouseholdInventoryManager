@@ -21,7 +21,7 @@
 
 - **React Native**
 - **Expo Router**
-- **TypeScript**
+- **JavaScript**
 - **NativeWind (TailwindCSS for React Native)**
 - **AsyncStorage**
 - **React Navigation (Bottom Tabs)**
