@@ -2,7 +2,6 @@
 
 **CasaCheiaApp** is a full-stack mobile application designed to help families manage their household inventory in a collaborative way. Users can track missing items, add or remove products, and sync in real time with other family members. Built using modern technologies for both frontend and backend.
 
----
 
 ## Features
 
@@ -13,7 +12,6 @@
 - Rate limiting and backend protection
 - Modern, gradient-based UI with rounded cards and navigation
 
----
 
 ## Tech Stack
 
@@ -37,7 +35,6 @@
 - **BcryptJS** for password hashing
 - **Rate Limiting (express-rate-limit)**
 
----
 
 ## Docker Setup
 
@@ -52,7 +49,6 @@ docker compose up --build
 - `backend`: Express.js API
 - `mongo`: MongoDB database
 
----
 
 ## Project Structure
 
@@ -79,7 +75,6 @@ CasaCheiaApp/
 └── README.md
 ```
 
----
 
 ## Security Notes
 
@@ -87,9 +82,4 @@ CasaCheiaApp/
 - Rate limiting is applied to sensitive routes (`/login`, `/create`).
 - Tokens are stored using secure storage on the device.
 
----
 
-
-## License
-
-MIT License. Feel free to use, modify, and share this project.
